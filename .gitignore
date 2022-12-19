@@ -1,0 +1,9 @@
+Makefile
+build
+build/*
+install
+install/*
+src/python/sip
+.qmake.stash
+*.o
+moc_*
