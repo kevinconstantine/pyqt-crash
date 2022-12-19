@@ -4,9 +4,11 @@ Python3, PyQt, SIP, Qt5 are available
 
 Building
 ---------
+```
 qmake-qt5
 make
 make install
+```
 
 Testing
 --------
