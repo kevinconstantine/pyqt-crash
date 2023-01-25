@@ -4,6 +4,7 @@ build/*
 install
 install/*
 src/python/__pycache__
+src/python/mylib.built
 .qmake.stash
 *.o
 moc_*

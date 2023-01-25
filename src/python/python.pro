@@ -1,13 +1,13 @@
 TEMPLATE = app
-TARGET = sip/mylib.so
+TARGET = mylib.built
 
-SIPFILE = mylib.sip
-QMAKE_CLEAN = sip
-
-sip.commands = 'mkdir -p sip; cd sip && python ../configure.py -f ../$$SIPFILE && $(MAKE)'
-sip.target = sip/mylib.so
-sip.depends = mylib.sip stdsharedptr.sip configure.py
+sip.commands = 'sip-install --verbose; touch mylib.built'
+sip.target = mylib.built
+sip.path = $$top_builddir/install/mylib.built
+sip.depends = sip/mylib.sip sip/stdsharedptr.sip project.py pyproject.toml README
 
 QMAKE_EXTRA_TARGETS += sip
-target.path = $$top_builddir/install/lib
-INSTALLS += target
+INSTALLS += sip
+
+QMAKE_CLEAN += mylib.built
+QMAKE_DISTCLEAN += mylib.built
