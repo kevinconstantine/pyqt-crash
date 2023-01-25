@@ -3,7 +3,7 @@ build
 build/*
 install
 install/*
-src/python/sip
+src/python/__pycache__
 .qmake.stash
 *.o
 moc_*
