@@ -12,5 +12,5 @@ DESTDIR = $$top_builddir/build/bin
 
 TARGET=mylibbin
 #target.path = $$top_builddir/install/bin
-target.path = $$[QT_INSTALL_BINS]
+target.path = $$(VIRTUAL_ENV)/bin
 INSTALLS += target
