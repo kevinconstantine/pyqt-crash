@@ -1,3 +1,3 @@
 TEMPLATE = subdirs
 
-SUBDIRS += lib bin python
+SUBDIRS += lib bindings bin python

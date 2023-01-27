@@ -25,7 +25,7 @@ namespace mylib {
 				printf("mylib SIP Array Constructor\n");
 			    try
 				{
-				sipCpp = new sipmylib_Array(a0);
+    				sipCpp = new sipmylib_Array(a0);
 				}
 				catch (...)
 				{
@@ -72,3 +72,11 @@ namespace mylib {
 			DGraph &operator=(const DGraph &);
 	};
 }; // mylib namespace
+
+%ModuleHeaderCode
+#include "mylib_bindings.h"
+%End
+
+%InitialisationCode
+mylib_init();
+%End
