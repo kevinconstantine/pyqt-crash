@@ -36,4 +36,5 @@ class mylibQt5Bindings(PyQtBindings):
         self.include_dirs.append("/disney/home/kconstan/repos/repro/py3-crash-repro/src/lib")
         self.library_dirs.append("/disney/home/kconstan/repos/repro/py3-crash-repro/build/lib")
         self.libraries.append("mylib")
+        self.libraries.append("mylib_bindings")
         super().apply_user_defaults(tool)
