@@ -33,8 +33,13 @@ class mylibQt5Bindings(PyQtBindings):
         self.exceptions = True
 
         # Set include_dirs, library_dirs and libraries based on pkg-config data
-        self.include_dirs.append("/disney/home/kconstan/repos/repro/py3-crash-repro/src/lib")
-        self.library_dirs.append("/disney/home/kconstan/repos/repro/py3-crash-repro/build/lib")
+        src_python = os.path.dirname(os.path.abspath(__file__))
+        src = os.path.dirname(src_python)
+        root = os.path.dirname(src)
+        self.include_dirs.append(os.path.join(src, 'lib'))
+        self.include_dirs.append(os.path.join(src, 'bindings'))
+        self.include_dirs.append(os.path.join(root, 'build', 'lib'))
+        self.library_dirs.append(os.path.join(root, 'build', 'lib'))
         self.libraries.append("mylib")
         self.libraries.append("mylib_bindings")
         super().apply_user_defaults(tool)
