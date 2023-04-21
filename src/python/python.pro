@@ -1,7 +1,7 @@
 TEMPLATE = app
 TARGET = mylib.built
 
-sip.commands = 'sip-install --verbose; touch mylib.built'
+sip.commands = "sip-install --qmake /usr/bin/qmake-qt5 --target-dir $${top_builddir}/install/mylib.built  --verbose; touch mylib.built"
 sip.target = mylib.built
 sip.path = $$top_builddir/install/mylib.built
 sip.depends = sip/mylib.sip sip/stdsharedptr.sip project.py pyproject.toml README
