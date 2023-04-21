@@ -13,6 +13,7 @@ class mylib(PyQtProject):
 
         super().__init__()
         self.bindings_factories = [mylibQt5Bindings]
+        self.abi_version = "12.9"
 
     def update(self, tool):
         """Allows SIP to find PyQt5 .sip files."""
